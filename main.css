@@ -1,0 +1,66 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.flex-container > div {
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  flex-shrink: 1;
+}
+.col-1 {
+  background-color: purple;
+}
+.col-2 {
+  background-color: rebeccapurple;
+}
+.col-3 {
+  background-color: blue;
+
+}
+.col-4 {
+  background-color: green;
+}
+.col-5 {
+  background-color: gold;
+}
+.col-6 {
+  background-color: goldenrod;
+}
+.col-7 {
+  background-color: red;
+  color: white;
+}
+
+@media (max-width: 600) {
+  .flex-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+@media (min-width: 601px) {
+  .flex-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .col-3, .col-4, .col-5 {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 801px) {
+  .flex-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .col-1, .col-2, .col-6, .col-7 {
+    width: 50%;
+  }
+  .col-3, .col-4, .col-5 {
+    width: 33.33%;
+  }
+}
